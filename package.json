@@ -1,0 +1,15 @@
+{
+  "name": "cura",
+  "type": "module",
+  "private": true,
+  "packageManager": "bun@1.2.22",
+  "workspaces": {
+    "packages": [
+      "apps/*",
+      "libs/*"
+    ],
+    "catalog": {
+      "typescript": "5.9.2"
+    }
+  }
+}

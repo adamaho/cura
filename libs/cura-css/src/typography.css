@@ -1,0 +1,46 @@
+@layer cura.base {
+  :is(html, body, .c) {
+    /**
+    * font-family 
+    */
+    --c-ff-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+    --c-ff-serif: "Playfair Display", "Times New Roman", serif;
+    --c-ff-mono:
+      "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+      "Liberation Mono", "Courier New", monospace;
+
+    /**
+    * font-size 
+    */
+    --c-fs-1: calc(11px * var(--c-scale, 1));
+    --c-fs-2: calc(13px * var(--c-scale, 1));
+    --c-fs-3: calc(15px * var(--c-scale, 1));
+    --c-fs-4: calc(18px * var(--c-scale, 1));
+    --c-fs-5: calc(22px * var(--c-scale, 1));
+    --c-fs-6: calc(28px * var(--c-scale, 1));
+    --c-fs-7: calc(32px * var(--c-scale, 1));
+    --c-fs-8: calc(64px * var(--c-scale, 1));
+
+    /**
+    * font-weight 
+    */
+    --c-fw-1: 400;
+    --c-fw-2: 500;
+    --c-fw-3: 600;
+    --c-fw-4: 700;
+    --c-fw-5: 800;
+
+    /**
+    * line-height
+    */
+    --c-lh-1: calc(16px * var(--c-scale, 1));
+    --c-lh-2: calc(20px * var(--c-scale, 1));
+    --c-lh-3: calc(24px * var(--c-scale, 1));
+    --c-lh-4: calc(26px * var(--c-scale, 1));
+    --c-lh-5: calc(28px * var(--c-scale, 1));
+    --c-lh-6: calc(30px * var(--c-scale, 1));
+    --c-lh-7: calc(36px * var(--c-scale, 1));
+    --c-lh-8: calc(40px * var(--c-scale, 1));
+    --c-lh-9: calc(60px * var(--c-scale, 1));
+  }
+}

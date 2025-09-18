@@ -1,0 +1,5 @@
+{
+  "extends": "@tsconfig/bun/tsconfig.json",
+  "include": ["scripts"],
+  "exclude": ["node_modules"]
+}
