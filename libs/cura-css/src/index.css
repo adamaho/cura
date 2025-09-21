@@ -5,4 +5,5 @@
 * Base
 */
 @import "./scale.css";
+@import "./space.css";
 @import "./typography.css";

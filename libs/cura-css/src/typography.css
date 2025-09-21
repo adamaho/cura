@@ -1,5 +1,5 @@
 @layer cura.base {
-  :is(html, body, .c) {
+  :is(html, body, .cura) {
     /**
     * font-family 
     */

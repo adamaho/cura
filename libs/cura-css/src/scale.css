@@ -1,23 +1,21 @@
 @layer cura.base {
-  :is(html, body, .c) {
-    [data-scale="90%"] {
-      --c-scale: 0.9;
-    }
+  [data-scale="90%"] {
+    --c-scale: 0.9;
+  }
 
-    [data-scale="95%"] {
-      --c-scale: 0.95;
-    }
+  [data-scale="95%"] {
+    --c-scale: 0.95;
+  }
 
-    [data-scale="100%"] {
-      --c-scale: 1;
-    }
+  [data-scale="100%"] {
+    --c-scale: 1;
+  }
 
-    [data-scale="105%"] {
-      --c-scale: 1.05;
-    }
+  [data-scale="105%"] {
+    --c-scale: 1.05;
+  }
 
-    [data-scale="110%"] {
-      --c-scale: 1.1;
-    }
+  [data-scale="110%"] {
+    --c-scale: 1.1;
   }
 }
