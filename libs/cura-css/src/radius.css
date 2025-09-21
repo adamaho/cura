@@ -1,0 +1,40 @@
+@layer cura.base {
+  /**
+  * Radius factor
+  */
+  :is(html, body, .cura) {
+    [data-radius="none"] {
+      --c-rf: 0;
+    }
+
+    [data-radius="sm"] {
+      --c-rf: 0.65;
+    }
+
+    [data-radius="md"] {
+      --c-rf: 1;
+    }
+
+    [data-radius="lg"] {
+      --c-rf: 1.5;
+    }
+
+    [data-radius="full"] {
+      --c-rf: 9999;
+    }
+  }
+
+  /**
+  * Radius
+  */
+  :is(html, body, .cura) {
+    --c-r-1: calc(4px * var(--c-scale, 1) * var(--c-rf, 1));
+    --c-r-2: calc(6px * var(--c-scale, 1) * var(--c-rf, 1));
+    --c-r-3: calc(8px * var(--c-scale, 1) * var(--c-rf, 1));
+    --c-r-4: calc(12px * var(--c-scale, 1) * var(--c-rf, 1));
+    --c-r-5: calc(16px * var(--c-scale, 1) * var(--c-rf, 1));
+    --c-r-6: calc(24px * var(--c-scale, 1) * var(--c-rf, 1));
+    --c-r-7: calc(32px * var(--c-scale, 1) * var(--c-rf, 1));
+    --c-r-full: calc(9999px * var(--c-scale, 1) * var(--c-rf, 1));
+  }
+}
