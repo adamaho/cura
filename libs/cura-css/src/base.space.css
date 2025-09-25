@@ -1,5 +1,5 @@
 @layer cura.base {
-  :is(html, body, .cura) {
+  .cura {
     --c-s-1: calc(4px * var(--c-scale, 1));
     --c-s-2: calc(8px * var(--c-scale, 1));
     --c-s-3: calc(12px * var(--c-scale, 1));

@@ -1,33 +1,31 @@
 @layer cura.base {
   /**
-  * Radius factor
+  * radius-factor 
   */
-  :is(html, body, .cura) {
-    [data-radius="none"] {
-      --c-rf: 0;
-    }
+  [data-radius="none"] {
+    --c-rf: 0;
+  }
 
-    [data-radius="sm"] {
-      --c-rf: 0.65;
-    }
+  [data-radius="sm"] {
+    --c-rf: 0.65;
+  }
 
-    [data-radius="md"] {
-      --c-rf: 1;
-    }
+  [data-radius="md"] {
+    --c-rf: 1;
+  }
 
-    [data-radius="lg"] {
-      --c-rf: 1.5;
-    }
+  [data-radius="lg"] {
+    --c-rf: 1.5;
+  }
 
-    [data-radius="full"] {
-      --c-rf: 9999;
-    }
+  [data-radius="full"] {
+    --c-rf: 9999;
   }
 
   /**
-  * Radius
+  * radius 
   */
-  :is(html, body, .cura) {
+  .cura {
     --c-r-1: calc(4px * var(--c-scale, 1) * var(--c-rf, 1));
     --c-r-2: calc(6px * var(--c-scale, 1) * var(--c-rf, 1));
     --c-r-3: calc(8px * var(--c-scale, 1) * var(--c-rf, 1));

@@ -1,0 +1,7 @@
+@import "./color.dark.amethyst.css";
+
+@layer cura.color {
+  [data-color-scheme="dark"] {
+    color-scheme: dark;
+  }
+}

@@ -1,5 +1,5 @@
 @layer cura.base {
-  :is(html, body, .cura) {
+  :root {
     /**
     * font-family 
     */
@@ -9,6 +9,17 @@
       "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
       "Liberation Mono", "Courier New", monospace;
 
+    /**
+    * font-weight 
+    */
+    --c-fw-1: 400;
+    --c-fw-2: 500;
+    --c-fw-3: 600;
+    --c-fw-4: 700;
+    --c-fw-5: 800;
+  }
+
+  .cura {
     /**
     * font-size 
     */
@@ -20,15 +31,6 @@
     --c-fs-6: calc(28px * var(--c-scale, 1));
     --c-fs-7: calc(32px * var(--c-scale, 1));
     --c-fs-8: calc(64px * var(--c-scale, 1));
-
-    /**
-    * font-weight 
-    */
-    --c-fw-1: 400;
-    --c-fw-2: 500;
-    --c-fw-3: 600;
-    --c-fw-4: 700;
-    --c-fw-5: 800;
 
     /**
     * line-height

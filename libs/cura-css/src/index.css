@@ -4,7 +4,7 @@
 /**
 * Base
 */
-@import "./radius.css";
-@import "./scale.css";
-@import "./space.css";
-@import "./typography.css";
+@import "./base.radius.css";
+@import "./base.scale.css";
+@import "./base.space.css";
+@import "./base.typography.css";

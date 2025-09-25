@@ -3,7 +3,8 @@
   "private": true,
   "type": "module",
   "exports": {
-    ".": "./src/index.css"
+    ".": "./src/index.css",
+    "./color": "./src/color.css"
   },
   "dependencies": {
     "@tsconfig/bun": "1.0.8"
