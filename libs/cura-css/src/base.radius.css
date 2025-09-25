@@ -25,7 +25,8 @@
   /**
   * radius 
   */
-  .cura {
+  .cura,
+  [data-radius] {
     --c-r-1: calc(4px * var(--c-scale, 1) * var(--c-rf, 1));
     --c-r-2: calc(6px * var(--c-scale, 1) * var(--c-rf, 1));
     --c-r-3: calc(8px * var(--c-scale, 1) * var(--c-rf, 1));

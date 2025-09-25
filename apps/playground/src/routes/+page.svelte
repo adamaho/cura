@@ -1,3 +1,7 @@
+<script>
+  import ToolbarButton from "$lib/components/toolbar-button.svelte";
+</script>
+
 <div
   class="playground cura"
   data-color-scheme="dark"
@@ -6,7 +10,7 @@
   data-accent-color="amethyst"
 >
   <header class="playground-header">
-    <button>hello world</button>
+    <ToolbarButton>Hello world</ToolbarButton>
   </header>
   <div class="playground-content">
     <div
@@ -34,6 +38,7 @@
     height: 100%;
 
     .playground-header {
+      border-bottom: var(--c-bw-1) solid var(--c-c-accent-g4);
       height: calc(54px * var(--c-scale));
     }
 
@@ -47,6 +52,8 @@
 
   [data-page="home"] {
     background-color: var(--c-c-accent-1);
+    border: var(--c-bw-1) solid var(--c-c-accent-g4);
+    border-radius: var(--c-r-5);
     display: flex;
     flex-direction: column;
     flex: 1;

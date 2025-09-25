@@ -1,0 +1,9 @@
+@layer cura.base {
+  :root {
+    /** border width */
+    --c-bw-1: 1px;
+    --c-bw-2: 2px;
+    --c-bw-3: 3px;
+    --c-bw-4: 4px;
+  }
+}
