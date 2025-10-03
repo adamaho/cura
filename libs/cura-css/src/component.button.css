@@ -1,0 +1,180 @@
+@layer winnie.component {
+  [data-component="button"] {
+    /* border radius */
+    --c-button-sm-r: var(--c-r-1);
+    --c-button-md-r: var(--c-r-2);
+    --c-button-lg-r: var(--c-r-3);
+    --c-button-kbd-sm-r: var(--c-r-2);
+    --c-button-kbd-md-r: var(--c-r-2);
+    --c-button-kbd-lg-r: var(--c-r-3);
+    --c-button-kbd-sm-r-max: var(--c-r-full);
+    --c-button-kbd-md-r-max: var(--c-r-full);
+    --c-button-kbd-lg-r-max: var(--c-r-full);
+
+    /* font size */
+    --c-button-sm-fs: var(--c-fs-1);
+    --c-button-md-fs: var(--c-fs-2);
+    --c-button-lg-fs: var(--c-fs-3);
+    --c-button-kbd-sm-fs: 0.85em;
+    --c-button-kbd-md-fs: 0.85em;
+    --c-button-kbd-lg-fs: 0.85em;
+
+    /* height */
+    --c-button-sm-h: calc(26px * var(--c-scale, 1));
+    --c-button-md-h: calc(32px * var(--c-scale, 1));
+    --c-button-lg-h: calc(42px * var(--c-scale, 1));
+    --c-button-kbd-sm-h: calc(var(--c-button-sm-h) - var(--c-s-3));
+    --c-button-kbd-md-h: calc(var(--c-button-md-h) - var(--c-s-2) * 2);
+    --c-button-kbd-lg-h: calc(var(--c-button-lg-h) - var(--c-s-4));
+
+    /* icon size */
+    --c-button-sm-is: 1.1em;
+    --c-button-md-is: 1.1em;
+    --c-button-lg-is: 1.1em;
+
+    /* space */
+    --c-button-sm-s: var(--c-s-3);
+    --c-button-md-s: var(--c-s-4);
+    --c-button-lg-s: var(--c-s-5);
+    --c-button-kbd-sm-s: var(--c-s-2);
+    --c-button-kbd-md-s: var(--c-s-3);
+    --c-button-kbd-lg-s: var(--c-s-4);
+
+    align-items: center;
+    border-radius: var(--c-button-r, var(--c-button-md-r));
+    cursor: var(--c-cursor-pressable, default);
+    display: flex;
+    isolation: isolate;
+    font-size: var(--c-button-fs, var(--c-button-md-fs));
+    gap: calc(var(--c-button-s, var(--c-button-md-s)) / 2);
+    height: var(--c-button-h, var(--c-button-md-h));
+    max-width: min-content;
+    min-width: max-content;
+    flex-shrink: 0;
+    padding-inline: var(--c-button-s, var(--c-button-md-s));
+    position: relative;
+    white-space: nowrap;
+
+    [data-slot="label"] {
+      font-size: var(--c-button-fs, var(--c-button-md-fs));
+      line-height: 1;
+    }
+
+    [data-slot="icon"] {
+      height: var(--c-button-is, var(--c-button-md-is));
+      width: var(--c-button-is, var(--c-button-md-is));
+    }
+
+    [data-slot="shortcut"] {
+      align-items: center;
+      display: flex;
+      gap: var(--c-s-1);
+      font-size: var(--c-button-kbd-fs, var(--c-button-kbd-md-fs));
+      margin-right: calc(-1 * (var(--c-button-kbd-h, var(--c-button-kbd-md-h)) / 2) + (var(--c-button-h, var(--c-button-md-h)) - var(--c-button-kbd-h, var(--c-button-kbd-md-h))) / 2);
+
+      [data-component="kbd"] {
+        align-items: center;
+        border-radius: min(var(--c-button-kbd-r, var(--c-button-kbd-md-r)), var(--c-button-kbd-r-max, var(--c-button-kbd-md-r-max)));
+        display: flex;
+        font-size: var(--c-button-kbd-fs, var(--c-button-kbd-md-fs));
+        height: var(--c-button-kbd-h, var(--c-button-kbd-md-h));
+        justify-content: center;
+        min-width: var(--c-button-kbd-h, var(--c-button-kbd-md-h));
+        padding-inline: var(--c-s-2);
+      }
+
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+
+    [data-slot="pending"] {
+      left: 0;
+      position: absolute;
+      z-index: 1;
+
+      & > svg {
+        height: calc(var(--c-button-is, var(--c-button-md-is)) * 1.2);
+        width: calc(var(--c-button-is, var(--c-button-md-is)) * 1.2);
+      }
+    }
+
+    /* has pending */
+    &:has([data-slot="pending"]) {
+      &::after {
+        border-radius: var(--c-button-r, var(--c-button-md-r));
+        content: "";
+        inset: 0;
+        height: 100%;
+        position: absolute;
+        width: 100%;
+      }
+
+      [data-slot="label"],
+      [data-slot="icon"],
+      [data-slot="shortcut"] {
+        opacity: 0;
+      }
+    }
+
+    /* only a single icon in the button or icon followed by pending slot */
+    &:has([data-slot="icon"]:only-child, [data-slot="icon"] + [data-slot="pending"], [data-slot="pending"] + [data-slot="icon"]):not([data-slot="label"]) {
+      height: var(--c-button-h, var(--c-button-md-h));
+      justify-content: center;
+      max-width: initial;
+      padding: 0;
+      width: var(--c-button-h, var(--c-button-md-h));
+    }
+
+    &[data-size="sm"] {
+      --c-button-r: var(--c-button-sm-r);
+      --c-button-fs: var(--c-button-sm-fs);
+      --c-button-h: var(--c-button-sm-h);
+      --c-button-is: var(--c-button-sm-is);
+      --c-button-s: var(--c-button-sm-s);
+      --c-button-kbd-r: var(--c-button-kbd-sm-r);
+      --c-button-kbd-r-max: var(--c-button-kbd-sm-r);
+      --c-button-kbd-fs: var(--c-button-kbd-sm-fs);
+      --c-button-kbd-h: var(--c-button-kbd-sm-h);
+      --c-button-kbd-s: var(--c-button-kbd-sm-s);
+    }
+
+    &[data-size="md"] {
+      --c-button-r: var(--c-button-md-r);
+      --c-button-h: var(--c-button-md-h);
+      --c-button-fs: var(--c-button-md-fs);
+      --c-button-is: var(--c-button-md-is);
+      --c-button-s: var(--c-button-md-s);
+      --c-button-kbd-r: var(--c-button-kbd-md-r);
+      --c-button-kbd-r-max: var(--c-button-kbd-md-r);
+      --c-button-kbd-fs: var(--c-button-kbd-md-fs);
+      --c-button-kbd-h: var(--c-button-kbd-md-h);
+      --c-button-kbd-s: var(--c-button-kbd-md-s);
+    }
+
+    &[data-size="lg"] {
+      --c-button-r: var(--c-button-lg-r);
+      --c-button-h: var(--c-button-lg-h);
+      --c-button-fs: var(--c-button-lg-fs);
+      --c-button-is: var(--c-button-lg-is);
+      --c-button-s: var(--c-button-lg-s);
+      --c-button-kbd-r: var(--c-button-kbd-lg-r);
+      --c-button-kbd-r-max: var(--c-button-kbd-lg-r);
+      --c-button-kbd-fs: var(--c-button-kbd-lg-fs);
+      --c-button-kbd-h: var(--c-button-kbd-lg-h);
+      --c-button-kbd-s: var(--c-button-kbd-lg-s);
+    }
+
+    &[data-width="full"] {
+      justify-content: center;
+      max-width: initial;
+      width: 100%;
+    }
+  }
+
+  :is(a, span)[data-component="button"] {
+    cursor: var(--c-cursor-linkable, pointer);
+    outline: none;
+    width: max-content;
+  }
+}

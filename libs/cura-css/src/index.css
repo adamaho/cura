@@ -1,11 +1,4 @@
 @import "./layer.css";
 @import "./reset.css";
-
-/**
-* Base
-*/
-@import "./base.border.css";
-@import "./base.radius.css";
-@import "./base.scale.css";
-@import "./base.space.css";
-@import "./base.typography.css";
+@import "./base.css";
+@import "./component.css";
