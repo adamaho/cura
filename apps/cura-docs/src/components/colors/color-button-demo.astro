@@ -1,0 +1,27 @@
+---
+import Button from "~/components/button/button.astro";
+import ButtonLabel from "~/components/button/button-label.astro";
+---
+
+<div data-component="color-button-demo">
+  <Button>
+    <ButtonLabel>New Pizza</ButtonLabel>
+  </Button>
+  <Button variant={2}>
+    <ButtonLabel>New Pizza</ButtonLabel>
+  </Button>
+</div>
+
+<style>
+  [data-component="color-button-demo"] {
+    align-items: center;
+    background: var(--c-c-accent-g2);
+    border: var(--c-bw-1) solid var(--c-c-accent-g4);
+    border-radius: var(--c-r-4);
+    display: flex;
+    flex-direction: row;
+    gap: var(--c-s-4);
+    justify-content: center;
+    padding: var(--c-s-8);
+  }
+</style>

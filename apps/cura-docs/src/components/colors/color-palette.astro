@@ -1,0 +1,43 @@
+---
+import ColorSwatch from "./color-swatch.astro";
+---
+
+<div data-component="color-palette">
+  <div data-slot="header">
+    {
+      Array(14)
+        .fill(0)
+        .map((_, i) => {
+          if (i === 0) return <span />;
+          return <span>{i}</span>;
+        })
+    }
+  </div>
+  <ColorSwatch color="amethyst" />
+</div>
+
+<style>
+  [data-component="color-palette"] {
+    --color-size: calc(28px * var(--c-scale));
+    display: grid;
+    grid-template-columns: auto repeat(13, var(--color-size));
+    grid-auto-rows: var(--color-size);
+    gap: calc(2px * var(--c-scale));
+
+    [data-slot="header"] {
+      align-items: end;
+      display: grid;
+      color: var(--c-c-accent-g12);
+      font-size: var(--c-fs-1);
+      gap: calc(2px * var(--c-scale));
+      grid-template-columns: subgrid;
+      grid-template-rows: subgrid;
+      grid-column: 1 / -1;
+      text-align: right;
+
+      span {
+        padding-bottom: var(--c-s-2);
+      }
+    }
+  }
+</style>

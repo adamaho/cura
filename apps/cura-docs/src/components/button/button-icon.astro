@@ -1,0 +1,11 @@
+---
+import type { HTMLAttributes } from "astro/types";
+
+export interface Props extends HTMLAttributes<"span"> {}
+
+const { ...rest } = Astro.props;
+---
+
+<span data-slot="icon" {...rest}>
+  <slot />
+</span>

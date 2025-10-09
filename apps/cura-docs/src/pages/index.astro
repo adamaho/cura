@@ -1,0 +1,52 @@
+---
+import ColorPalette from "~/components/colors/color-palette.astro";
+import ColorButtonDemo from "~/components/colors/color-button-demo.astro";
+
+import "cura-css";
+import "cura-css/color";
+---
+
+<html
+  lang="en"
+  class="cura"
+  data-color-scheme="dark"
+  data-scale="90%"
+  data-radius="sm"
+  data-accent-color="amethyst"
+>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Cura</title>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <aside>
+        <ColorPalette />
+      </aside>
+      <div>
+        <ColorButtonDemo />
+      </div>
+    </main>
+  </body>
+</html>
+
+<style>
+  body {
+    background: light-dark(white, black);
+    display: grid;
+    font-family: var(--c-ff-mono);
+    grid-template-rows: calc(54px * var(--c-scale)) 1fr;
+    height: 100vh;
+
+    main {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: var(--c-s-4);
+      padding: var(--c-s-4);
+    }
+  }
+</style>

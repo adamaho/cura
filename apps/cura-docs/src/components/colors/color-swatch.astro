@@ -1,0 +1,101 @@
+---
+type Props = {
+  color: "amethyst";
+};
+
+const { color } = Astro.props;
+---
+
+<ul data-component="color-swatch" data-accent-color={color}>
+  <li>{color}</li>
+  {
+    Array(13)
+      .fill(0)
+      .map((_, i) => {
+        return <li data-slot="chip" data-shade={i + 1} />;
+      })
+  }
+</ul>
+<ul
+  data-component="color-swatch"
+  data-accent-color={color}
+  data-color-mode="greyscale"
+>
+  <li></li>
+  {
+    Array(13)
+      .fill(0)
+      .map((_, i) => {
+        return <li data-slot="chip" data-shade={i + 1} />;
+      })
+  }
+</ul>
+
+<style>
+  [data-component="color-swatch"] {
+    display: grid;
+    gap: calc(2px * var(--c-scale));
+    grid-template-columns: subgrid;
+    grid-column: 1 / -1;
+
+    li {
+      &:nth-child(1) {
+        color: var(--c-c-accent-g12);
+        font-size: var(--c-fs-1);
+        margin-right: var(--c-s-4);
+      }
+
+      &[data-shade="1"] {
+        background: var(--c-c-accent-1);
+      }
+
+      &[data-shade="2"] {
+        background: var(--c-c-accent-2);
+      }
+
+      &[data-shade="3"] {
+        background: var(--c-c-accent-3);
+      }
+
+      &[data-shade="4"] {
+        background: var(--c-c-accent-4);
+      }
+
+      &[data-shade="5"] {
+        background: var(--c-c-accent-5);
+      }
+
+      &[data-shade="6"] {
+        background: var(--c-c-accent-6);
+      }
+
+      &[data-shade="7"] {
+        background: var(--c-c-accent-7);
+      }
+
+      &[data-shade="8"] {
+        background: var(--c-c-accent-8);
+      }
+
+      &[data-shade="9"] {
+        background: var(--c-c-accent-9);
+      }
+
+      &[data-shade="10"] {
+        background: var(--c-c-accent-10);
+      }
+
+      &[data-shade="11"] {
+        background: var(--c-c-accent-11);
+      }
+
+      &[data-shade="12"] {
+        background: var(--c-c-accent-12);
+      }
+
+      &[data-shade="13"] {
+        background: var(--c-c-accent-13);
+      }
+    }
+  }
+</style>

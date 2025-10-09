@@ -5,9 +5,7 @@
     */
     --c-ff-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
     --c-ff-serif: "Playfair Display", "Times New Roman", serif;
-    --c-ff-mono:
-      "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-      "Liberation Mono", "Courier New", monospace;
+    --c-ff-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 
     /**
     * font-weight 

@@ -9,7 +9,7 @@
     --c-c-amethyst-2: oklch(0.1665 0.0555 var(--c-c-h-amethyst)); /* app background 2 */
     --c-c-amethyst-3: oklch(0.198 0.066 var(--c-c-h-amethyst)); /* surface background 1 */
     --c-c-amethyst-4: oklch(0.2385 0.0795 var(--c-c-h-amethyst)); /* surface hover */
-    --c-c-amethyst-5: oklch(0.2655 0.0885 var(--c-c-h-amethyst)); /* surface pressed */
+    --c-c-amethyst-5: oklch(0.2655 0.0885 var(--c-c-h-amethyst)); /* surface pressed or subtle borders */
     --c-c-amethyst-6: oklch(0.32 0.09 var(--c-c-h-amethyst)); /* form borders */
     --c-c-amethyst-7: oklch(0.36 0.09 var(--c-c-h-amethyst)); /* interactive borders */
     --c-c-amethyst-8: oklch(0.4 0.12 var(--c-c-h-amethyst)); /* focus rings */
@@ -20,9 +20,9 @@
     --c-c-amethyst-13: oklch(0.98 0.05 var(--c-c-h-amethyst)); /* primary text */
     --c-c-amethyst-contrast: white;
 
-    --c-c-amethyst-g1: oklch(0.144 var(--c-c-cg-amethyst) var(--c-c-h-amethyst)); /* app background 1 */
-    --c-c-amethyst-g2: oklch(0.1665 var(--c-c-cg-amethyst) var(--c-c-h-amethyst)); /* app background 2 */
-    --c-c-amethyst-g3: oklch(0.176 var(--c-c-cg-amethyst) var(--c-c-h-amethyst)); /* surface background 1 */
+    --c-c-amethyst-g1: oklch(0.144 calc(var(--c-c-cg-amethyst) - 0.01) var(--c-c-h-amethyst)); /* app background 1 */
+    --c-c-amethyst-g2: oklch(0.1665 calc(var(--c-c-cg-amethyst) - 0.01) var(--c-c-h-amethyst)); /* app background 2 */
+    --c-c-amethyst-g3: oklch(0.176 calc(var(--c-c-cg-amethyst) - 0.01) var(--c-c-h-amethyst)); /* surface background 1 */
     --c-c-amethyst-g4: oklch(0.2385 var(--c-c-cg-amethyst) var(--c-c-h-amethyst)); /* surface hover */
     --c-c-amethyst-g5: oklch(0.2655 var(--c-c-cg-amethyst) var(--c-c-h-amethyst)); /* surface pressed */
     --c-c-amethyst-g6: oklch(0.32 var(--c-c-cg-amethyst) var(--c-c-h-amethyst)); /* form borders */

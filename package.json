@@ -9,7 +9,7 @@
       "libs/*"
     ],
     "catalog": {
-      "typescript": "5.9.2"
+      "typescript": "5.9.3"
     }
   },
   "scripts": {
@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "5.2.2",
-    "prettier": "3.6.2"
+    "prettier": "3.6.2",
+    "prettier-plugin-astro": "0.14.1"
   }
 }
