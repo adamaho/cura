@@ -24,7 +24,7 @@
     --c-button-md-h: calc(32px * var(--c-scale, 1));
     --c-button-lg-h: calc(42px * var(--c-scale, 1));
     --c-button-kbd-sm-h: calc(var(--c-button-sm-h) - var(--c-s-3));
-    --c-button-kbd-md-h: calc(var(--c-button-md-h) - var(--c-s-2) * 2);
+    --c-button-kbd-md-h: calc(var(--c-button-md-h) - var(--c-s-3));
     --c-button-kbd-lg-h: calc(var(--c-button-lg-h) - var(--c-s-4));
 
     /* icon size */

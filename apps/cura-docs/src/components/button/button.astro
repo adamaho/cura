@@ -3,11 +3,11 @@ import type { HTMLAttributes } from "astro/types";
 
 export interface Props extends HTMLAttributes<"button"> {
   size?: "sm" | "md" | "lg";
-  variant?: 1 | 2 | 3 | 4;
+  variant?: 1 | 2 | 3;
   width?: "full";
 }
 
-const { size, variant = 1, width, ...rest } = Astro.props;
+const { size = "md", variant = 1, width, ...rest } = Astro.props;
 ---
 
 <button
@@ -38,18 +38,39 @@ const { size, variant = 1, width, ...rest } = Astro.props;
       &:hover {
         background: var(--c-c-accent-10);
       }
+
+      [data-component="kbd"] {
+        background: var(--c-c-accent-13);
+        color: var(--c-c-accent-9);
+        font-weight: var(--c-fw-3);
+      }
     }
 
     &[data-variant="2"] {
       background: var(--c-c-accent-4);
-      border: var(--c-bw-1) solid black;
+      border: var(--c-bw-1) solid var(--c-c-accent-9);
       box-shadow:
-        0px 3px 0 -1px var(--c-c-accent-8),
-        0px 3px 0 0px black;
-      color: var(--c-c-accent-13);
+        0px 3px 0 -1px var(--c-c-accent-11),
+        0px 3px 0 0px var(--c-c-accent-8);
+      color: var(--c-c-accent-12);
 
       &:hover {
         background: var(--c-c-accent-5);
+      }
+
+      [data-component="kbd"] {
+        background: var(--c-c-accent-12);
+        color: var(--c-c-accent-4);
+        font-weight: var(--c-fw-3);
+      }
+    }
+
+    &[data-variant="3"] {
+      color: var(--c-c-accent-12);
+      margin-inline: calc(-1 * var(--c-button-s));
+
+      &:hover {
+        color: var(--c-c-accent-13);
       }
     }
 

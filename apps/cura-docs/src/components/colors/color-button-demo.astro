@@ -1,13 +1,24 @@
 ---
 import Button from "~/components/button/button.astro";
 import ButtonLabel from "~/components/button/button-label.astro";
+import ButtonKbd from "~/components/button/button-kbd.astro";
+import ButtonShortcut from "~/components/button/button-shortcut.astro";
 ---
 
 <div data-component="color-button-demo">
   <Button>
     <ButtonLabel>New Pizza</ButtonLabel>
+    <ButtonShortcut>
+      <ButtonKbd>P</ButtonKbd>
+    </ButtonShortcut>
   </Button>
   <Button variant={2}>
+    <ButtonLabel>New Pizza</ButtonLabel>
+    <ButtonShortcut>
+      <ButtonKbd>P</ButtonKbd>
+    </ButtonShortcut>
+  </Button>
+  <Button variant={3}>
     <ButtonLabel>New Pizza</ButtonLabel>
   </Button>
 </div>
