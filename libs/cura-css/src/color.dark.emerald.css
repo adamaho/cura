@@ -67,8 +67,8 @@
     --c-c-accent-g13: var(--c-c-emerald-g13);
     --c-c-accent-contrast: var(--c-c-emerald-gcontrast);
 
-    &[data-color-mode="chromatic"],
-    [data-color-mode="chromatic"] {
+    &:where([data-color-mode="chromatic"]),
+    :where([data-color-mode="chromatic"]) {
       --c-c-accent-g1: var(--c-c-emerald-1);
       --c-c-accent-g2: var(--c-c-emerald-2);
       --c-c-accent-g3: var(--c-c-emerald-3);
@@ -85,8 +85,8 @@
       --c-c-accent-gcontrast: var(--c-c-emerald-contrast);
     }
 
-    &[data-color-mode="greyscale"],
-    [data-color-mode="greyscale"] {
+    &:where([data-color-mode="greyscale"]),
+    :where([data-color-mode="greyscale"]) {
       --c-c-accent-1: var(--c-c-emerald-g1);
       --c-c-accent-2: var(--c-c-emerald-g2);
       --c-c-accent-3: var(--c-c-emerald-g3);
