@@ -11,11 +11,11 @@ const { size = "md", variant = 1, width, ...rest } = Astro.props;
 ---
 
 <button
+  {...rest}
   data-component="button"
   data-size={size}
   data-variant={variant}
   data-width={width}
-  {...rest}
 >
   <slot />
 </button>

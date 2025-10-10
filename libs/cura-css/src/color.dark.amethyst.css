@@ -1,38 +1,38 @@
 @layer cura.color {
   :root {
-    --c-c-h-amethyst: 300; /* amethyst hue  */
-    --c-c-cg-amethyst: 0.029; /* amethyst grey chroma */
+    --c-c-h-amethyst: 300;
+    --c-c-cg-amethyst: 0.029;
   }
 
   [data-color-scheme="dark"] {
-    --c-c-amethyst-1: oklch(0.124 0.048 var(--c-c-h-amethyst)); /* app background 1 */
-    --c-c-amethyst-2: oklch(0.1665 0.0555 var(--c-c-h-amethyst)); /* app background 2 */
-    --c-c-amethyst-3: oklch(0.198 0.066 var(--c-c-h-amethyst)); /* surface background 1 */
-    --c-c-amethyst-4: oklch(0.2385 0.0795 var(--c-c-h-amethyst)); /* surface hover */
-    --c-c-amethyst-5: oklch(0.2655 0.0885 var(--c-c-h-amethyst)); /* surface pressed or subtle borders */
-    --c-c-amethyst-6: oklch(0.32 0.1 var(--c-c-h-amethyst)); /* form borders */
-    --c-c-amethyst-7: oklch(0.36 0.1 var(--c-c-h-amethyst)); /* interactive borders */
-    --c-c-amethyst-8: oklch(0.4 0.12 var(--c-c-h-amethyst)); /* focus rings */
-    --c-c-amethyst-9: oklch(0.45 0.15 var(--c-c-h-amethyst)); /* button default */
-    --c-c-amethyst-10: oklch(0.5 0.18 var(--c-c-h-amethyst)); /* button hover */
-    --c-c-amethyst-11: oklch(0.55 0.2 var(--c-c-h-amethyst)); /* button pressed */
-    --c-c-amethyst-12: oklch(0.84 0.1 var(--c-c-h-amethyst)); /* subtle text */
-    --c-c-amethyst-13: oklch(0.98 0.05 var(--c-c-h-amethyst)); /* primary text */
+    --c-c-amethyst-1: oklch(0.124 0.048 var(--c-c-h-amethyst));
+    --c-c-amethyst-2: oklch(0.1665 0.0555 var(--c-c-h-amethyst));
+    --c-c-amethyst-3: oklch(0.198 0.066 var(--c-c-h-amethyst));
+    --c-c-amethyst-4: oklch(0.2385 0.0795 var(--c-c-h-amethyst));
+    --c-c-amethyst-5: oklch(0.2655 0.0885 var(--c-c-h-amethyst));
+    --c-c-amethyst-6: oklch(0.32 0.1 var(--c-c-h-amethyst));
+    --c-c-amethyst-7: oklch(0.36 0.1 var(--c-c-h-amethyst));
+    --c-c-amethyst-8: oklch(0.4 0.12 var(--c-c-h-amethyst));
+    --c-c-amethyst-9: oklch(0.45 0.15 var(--c-c-h-amethyst));
+    --c-c-amethyst-10: oklch(0.5 0.18 var(--c-c-h-amethyst));
+    --c-c-amethyst-11: oklch(0.55 0.2 var(--c-c-h-amethyst));
+    --c-c-amethyst-12: oklch(0.84 0.1 var(--c-c-h-amethyst));
+    --c-c-amethyst-13: oklch(0.98 0.05 var(--c-c-h-amethyst));
     --c-c-amethyst-contrast: white;
 
-    --c-c-amethyst-g1: oklch(0.144 calc(var(--c-c-cg-amethyst) - 0.01) var(--c-c-h-amethyst)); /* app background 1 */
-    --c-c-amethyst-g2: oklch(0.1665 calc(var(--c-c-cg-amethyst) - 0.01) var(--c-c-h-amethyst)); /* app background 2 */
-    --c-c-amethyst-g3: oklch(0.176 calc(var(--c-c-cg-amethyst) - 0.01) var(--c-c-h-amethyst)); /* surface background 1 */
-    --c-c-amethyst-g4: oklch(0.2385 var(--c-c-cg-amethyst) var(--c-c-h-amethyst)); /* surface hover */
-    --c-c-amethyst-g5: oklch(0.2655 var(--c-c-cg-amethyst) var(--c-c-h-amethyst)); /* surface pressed */
-    --c-c-amethyst-g6: oklch(0.32 var(--c-c-cg-amethyst) var(--c-c-h-amethyst)); /* form borders */
-    --c-c-amethyst-g7: oklch(0.36 var(--c-c-cg-amethyst) var(--c-c-h-amethyst)); /* interactive borders */
-    --c-c-amethyst-g8: oklch(0.4 var(--c-c-cg-amethyst) var(--c-c-h-amethyst)); /* focus rings */
-    --c-c-amethyst-g9: oklch(0.45 var(--c-c-cg-amethyst) var(--c-c-h-amethyst)); /* button default */
-    --c-c-amethyst-g10: oklch(0.5 var(--c-c-cg-amethyst) var(--c-c-h-amethyst)); /* button hover */
-    --c-c-amethyst-g11: oklch(0.55 var(--c-c-cg-amethyst) var(--c-c-h-amethyst)); /* button pressed */
-    --c-c-amethyst-g12: oklch(0.78 var(--c-c-cg-amethyst) var(--c-c-h-amethyst)); /* subtle text */
-    --c-c-amethyst-g13: oklch(0.95 var(--c-c-cg-amethyst) var(--c-c-h-amethyst)); /* primary text */
+    --c-c-amethyst-g1: oklch(0.144 calc(var(--c-c-cg-amethyst) - 0.01) var(--c-c-h-amethyst));
+    --c-c-amethyst-g2: oklch(0.1665 calc(var(--c-c-cg-amethyst) - 0.01) var(--c-c-h-amethyst));
+    --c-c-amethyst-g3: oklch(0.196 calc(var(--c-c-cg-amethyst) - 0.01) var(--c-c-h-amethyst));
+    --c-c-amethyst-g4: oklch(0.2385 var(--c-c-cg-amethyst) var(--c-c-h-amethyst));
+    --c-c-amethyst-g5: oklch(0.2655 var(--c-c-cg-amethyst) var(--c-c-h-amethyst));
+    --c-c-amethyst-g6: oklch(0.32 var(--c-c-cg-amethyst) var(--c-c-h-amethyst));
+    --c-c-amethyst-g7: oklch(0.36 var(--c-c-cg-amethyst) var(--c-c-h-amethyst));
+    --c-c-amethyst-g8: oklch(0.4 var(--c-c-cg-amethyst) var(--c-c-h-amethyst));
+    --c-c-amethyst-g9: oklch(0.45 var(--c-c-cg-amethyst) var(--c-c-h-amethyst));
+    --c-c-amethyst-g10: oklch(0.5 var(--c-c-cg-amethyst) var(--c-c-h-amethyst));
+    --c-c-amethyst-g11: oklch(0.55 var(--c-c-cg-amethyst) var(--c-c-h-amethyst));
+    --c-c-amethyst-g12: oklch(0.78 var(--c-c-cg-amethyst) var(--c-c-h-amethyst));
+    --c-c-amethyst-g13: oklch(0.95 var(--c-c-cg-amethyst) var(--c-c-h-amethyst));
     --c-c-amethyst-gcontrast: white;
   }
 

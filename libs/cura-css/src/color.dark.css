@@ -1,4 +1,5 @@
 @import "./color.dark.amethyst.css";
+@import "./color.dark.emerald.css";
 
 @layer cura.color {
   [data-color-scheme="dark"] {
