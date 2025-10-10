@@ -6,20 +6,17 @@ import ButtonShortcut from "~/components/button/button-shortcut.astro";
 ---
 
 <div data-component="color-button-demo">
-  <Button>
-    <ButtonLabel>New Pizza</ButtonLabel>
-    <ButtonShortcut>
-      <ButtonKbd>P</ButtonKbd>
-    </ButtonShortcut>
-  </Button>
   <Button variant={2}>
-    <ButtonLabel>New Pizza</ButtonLabel>
+    <ButtonLabel>Cancel</ButtonLabel>
+    <ButtonShortcut>
+      <ButtonKbd>Esc</ButtonKbd>
+    </ButtonShortcut>
+  </Button>
+  <Button>
+    <ButtonLabel>Create Pizza</ButtonLabel>
     <ButtonShortcut>
       <ButtonKbd>P</ButtonKbd>
     </ButtonShortcut>
-  </Button>
-  <Button variant={3}>
-    <ButtonLabel>New Pizza</ButtonLabel>
   </Button>
 </div>
 
@@ -31,7 +28,7 @@ import ButtonShortcut from "~/components/button/button-shortcut.astro";
     border-radius: var(--c-r-4);
     display: flex;
     flex-direction: row;
-    gap: var(--c-s-4);
+    gap: var(--c-s-3);
     justify-content: center;
     padding: var(--c-s-8);
   }
