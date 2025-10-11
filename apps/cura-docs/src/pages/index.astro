@@ -28,7 +28,7 @@ import "cura-css/color";
       <aside>
         <ColorPalette />
       </aside>
-      <div data-accent-color="emerald">
+      <div data-component="demos" data-accent-color="emerald">
         <GoToWaypoint />
       </div>
     </main>
@@ -46,8 +46,19 @@ import "cura-css/color";
     main {
       display: grid;
       grid-template-columns: auto 1fr;
+      container: main / inline-size;
       gap: var(--c-s-4);
       padding: var(--c-s-4);
+
+      [data-component="demos"] {
+        align-items: flex-start;
+        display: grid;
+        grid-template-columns: 1fr;
+
+        @container main (width > 1200px) {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
     }
   }
 </style>
