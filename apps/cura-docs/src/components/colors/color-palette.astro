@@ -1,44 +1,138 @@
 ---
-import ColorSwatch from "./color-swatch.astro";
+const colors = ["amethyst", "emerald"];
 ---
 
-<div data-component="color-palette">
-  <div data-slot="header">
+<table data-component="color-palette">
+  <thead data-slot="header">
+    <tr>
+      {
+        Array(14)
+          .fill(0)
+          .map((_, i) => {
+            if (i === 0) return <th />;
+            return <th>{i}</th>;
+          })
+      }
+    </tr>
+  </thead>
+  <tbody data-slot="body">
     {
-      Array(14)
-        .fill(0)
-        .map((_, i) => {
-          if (i === 0) return <span />;
-          return <span>{i}</span>;
-        })
+      colors.map((color) => (
+        <>
+          <tr data-component="color-swatch" data-accent-color={color}>
+            <td>{color}</td>
+            {Array(13)
+              .fill(0)
+              .map((_, i) => {
+                return <td data-slot="chip" data-shade={i + 1} />;
+              })}
+          </tr>
+          <tr
+            data-component="color-swatch"
+            data-accent-color={color}
+            data-color-mode="greyscale"
+          >
+            <td />
+            {Array(13)
+              .fill(0)
+              .map((_, i) => {
+                return <td data-slot="chip" data-shade={i + 1} />;
+              })}
+          </tr>
+        </>
+      ))
     }
-  </div>
-  <ColorSwatch color="amethyst" />
-  <ColorSwatch color="emerald" />
-</div>
+  </tbody>
+</table>
 
 <style>
   [data-component="color-palette"] {
     --color-size: calc(28px * var(--c-scale));
 
-    display: grid;
-    grid-template-columns: auto repeat(13, var(--color-size));
-    grid-auto-rows: var(--color-size);
-    gap: calc(2px * var(--c-scale));
+    width: max-content;
+
+    [data-slot="header"],
+    thead,
+    tbody,
+    tr {
+    }
 
     [data-slot="header"] {
-      align-items: end;
-      display: grid;
-      color: var(--c-c-accent-g12);
-      font-size: var(--c-fs-1);
-      gap: calc(2px * var(--c-scale));
-      grid-template-columns: subgrid;
-      grid-template-rows: subgrid;
-      grid-column: 1 / -1;
-      text-align: center;
+      tr {
+        align-items: flex-end;
 
-      span {
-        padding-bottom: var(--c-s-2);
+        th {
+          color: var(--c-c-accent-g12);
+          font-size: var(--c-fs-1);
+          padding-bottom: var(--c-s-2);
+          text-align: center;
+        }
+      }
+    }
+
+    [data-slot="body"] {
+      td {
+        height: var(--color-size);
+        width: var(--color-size);
+
+        &:nth-child(1) {
+          color: var(--c-c-accent-g12);
+          font-size: var(--c-fs-1);
+          margin-right: var(--c-s-4);
+          text-align: left;
+        }
+
+        &[data-shade="1"] {
+          background: var(--c-c-accent-1);
+        }
+
+        &[data-shade="2"] {
+          background: var(--c-c-accent-2);
+        }
+
+        &[data-shade="3"] {
+          background: var(--c-c-accent-3);
+        }
+
+        &[data-shade="4"] {
+          background: var(--c-c-accent-4);
+        }
+
+        &[data-shade="5"] {
+          background: var(--c-c-accent-5);
+        }
+
+        &[data-shade="6"] {
+          background: var(--c-c-accent-6);
+        }
+
+        &[data-shade="7"] {
+          background: var(--c-c-accent-7);
+        }
+
+        &[data-shade="8"] {
+          background: var(--c-c-accent-8);
+        }
+
+        &[data-shade="9"] {
+          background: var(--c-c-accent-9);
+        }
+
+        &[data-shade="10"] {
+          background: var(--c-c-accent-10);
+        }
+
+        &[data-shade="11"] {
+          background: var(--c-c-accent-11);
+        }
+
+        &[data-shade="12"] {
+          background: var(--c-c-accent-12);
+        }
+
+        &[data-shade="13"] {
+          background: var(--c-c-accent-13);
+        }
       }
     }
   }

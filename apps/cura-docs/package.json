@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@fontsource/ibm-plex-mono": "5.2.7",
-    "astro": "5.14.1",
+    "astro": "5.14.4",
     "cura-css": "workspace:*"
   }
 }

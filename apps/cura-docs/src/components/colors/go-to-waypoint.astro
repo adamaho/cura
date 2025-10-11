@@ -1,0 +1,106 @@
+---
+import Button from "~/components/button/button.astro";
+import ButtonLabel from "~/components/button/button-label.astro";
+import ButtonKbd from "~/components/button/button-kbd.astro";
+import ButtonShortcut from "~/components/button/button-shortcut.astro";
+---
+
+<figure data-component="go-to-waypoint">
+  <div data-slot="figure">
+    <svg
+      data-component="icon-waypoint"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+    >
+      <path
+        data-slot="outer-ring"
+        d="M21.25 12C21.25 17.1086 17.1086 21.25 12 21.25C6.89137 21.25 2.75 17.1086 2.75 12C2.75 6.89137 6.89137 2.75 12 2.75C17.1086 2.75 21.25 6.89137 21.25 12Z"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"></path>
+      <path
+        d="M10.5 11.25H13.5M10.5 12.75H13.5"
+        data-slot="dot"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"></path>
+      <path
+        d="M9.75 12C9.75 13.2426 10.7574 14.25 12 14.25C13.2426 14.25 14.25 13.2426 14.25 12C14.25 10.7574 13.2426 9.75 12 9.75C10.7574 9.75 9.75 10.7574 9.75 12Z"
+        data-slot="inner-ring"
+        stroke-width="1.5"></path>
+    </svg>
+  </div>
+  <footer data-slot="footer">
+    <Button variant={2}>
+      <ButtonLabel>Cancel</ButtonLabel>
+      <ButtonShortcut>
+        <ButtonKbd>Esc</ButtonKbd>
+      </ButtonShortcut>
+    </Button>
+    <Button>
+      <ButtonLabel>Go to waypoint</ButtonLabel>
+      <ButtonShortcut>
+        <ButtonKbd>G</ButtonKbd>
+      </ButtonShortcut>
+    </Button>
+  </footer>
+</figure>
+
+<style>
+  [data-component="go-to-waypoint"] {
+    align-items: center;
+    background: var(--c-c-accent-g2);
+    border: var(--c-bw-1) solid var(--c-c-accent-g3);
+    border-radius: var(--c-r-4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--c-s-6);
+    margin: 0;
+    padding: var(--c-s-8);
+
+    [data-slot="figure"] {
+      background: var(--c-c-accent-3);
+      border-radius: var(--c-r-full);
+      height: calc(100px * var(--c-scale));
+      width: calc(100px * var(--c-scale));
+
+      [data-component="icon-waypoint"] {
+        [data-slot="outer-ring"] {
+          stroke: var(--c-c-accent-5);
+          animation: pulse-outer 2s ease-in-out infinite;
+          transform-origin: center;
+        }
+
+        [data-slot="inner-ring"] {
+          stroke: var(--c-c-accent-7);
+        }
+
+        [data-slot="dot"] {
+          stroke: var(--c-c-accent-10);
+        }
+      }
+    }
+
+    [data-slot="footer"] {
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      gap: var(--c-s-3);
+      justify-content: center;
+    }
+  }
+
+  @keyframes pulse-outer {
+    0%,
+    100% {
+      transform: scale(1);
+      opacity: 0.6;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 1;
+    }
+  }
+</style>
